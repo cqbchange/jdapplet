@@ -1,0 +1,66 @@
+/* pages/myorder/myorder.wxss */
+.contaner{
+  background-color: #F7F7F7;
+}
+.allorder{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  font-size: 35rpx;
+}
+.orderitem{
+  height: 68rpx;
+  color: rgb(63, 63, 63);
+}
+.orderitems{
+  color: #F72608;
+  border-bottom: 4px solid #F72608;
+}
+.top{
+  display: flex;
+  align-items: center;
+}
+.goodswrap{
+  margin:20rpx ;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 0 7rpx rgb(219, 219, 219);
+}
+.orderstate{
+  position: absolute;
+  top: 30rpx ;
+  right: 40rpx;
+}
+.img{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+}
+.dec{
+  width: 55%;
+  margin-left: 15rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2 ;
+  -webkit-box-orient:vertical;
+  display: -webkit-box;
+}
+.price{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.baybtn{
+  margin-top: 20rpx;
+  padding: 10rpx 15rpx;
+  border-radius: 10rpx;
+  border: 1px solid #F72608;
+  color: #F72608;
+  display: flex;
+  align-items: center;
+  margin-left: 15rpx;
+}

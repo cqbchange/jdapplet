@@ -1,0 +1,187 @@
+.entirety{
+  background-color: #F2F2F2;
+}
+
+.main{
+  background-color: white;
+}
+.scont{
+  display: flex;
+  padding: 20rpx;
+  border-radius: 0  0 5rpx 5rpx;
+}
+.address{
+ width: 75%;
+ overflow: hidden;
+ white-space: nowrap;
+ text-overflow: ellipsis;
+}
+/* 选择地址 */
+.adressbottom{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+  background-color: rgba(36, 36, 36, .5);
+}
+.distribution{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  /* padding: 30rpx ; */
+}
+.asdf{
+  display: flex;
+  padding: 30rpx 30rpx 0;
+}
+.addaress{
+  display: none;
+}
+.sdistrib{
+  flex-grow: 1;
+  text-align: center;
+}
+/* 分享 */
+.iconimg{
+  width: 50rpx;
+  height: 40rpx;
+  vertical-align: -4rpx;
+}
+.shareimg{
+  padding: 0 20rpx;
+}
+.elseaddress{
+  /* width: 100%; */
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background-color: #DF3D2B;
+  text-align: center;
+}
+.city{
+  /* height: 600rpx; */
+  padding: 30rpx 10rpx 10rpx;
+}
+.publiccity{
+  height: 680rpx;
+}
+.gong{
+  width: 60rpx;
+}
+.sku{
+  margin-left: 20rpx;
+  font-size: 25rpx;
+}
+.citystyle{
+  border-bottom: 1rpx solid gray;
+  display: flex;
+}
+.plublic{
+  margin:20rpx 20rpx 0;
+  padding-bottom: 15rpx;
+  color: #DF3D2B;
+  border-bottom: 1rpx solid  #DF3D2B;
+}
+.plublicp{
+  margin:20rpx 20rpx 0;
+  padding-bottom: 15rpx;
+}
+.province{
+  height: 520rpx;
+  overflow: scroll;
+}
+.stylecptive{
+  padding: 20rpx;
+}
+.sazecolor{
+color: #DF3D2B;
+padding: 20rpx;
+}
+.shoppcar{
+  padding-bottom: 80rpx;
+}
+/* 底部结算 */
+.bottombase{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  box-shadow: 1rpx 0rpx 17rpx gainsboro;
+  z-index: 999;
+  padding: 10rpx 20rpx;
+  background-color: #F2F2F2
+}
+.checkall{
+  padding: 20rpx 30rpx;
+  flex-grow: 1;
+}
+.aggregate{
+  padding: 20rpx 30rpx;
+}
+.serrlement{
+  padding: 20rpx 30rpx;
+  border-radius: 60rpx;
+  color: #fff;
+  background-color: #DF3D2B;
+}
+/* 购物车 */
+.shoppings{
+  margin: 30rpx 0;
+  background-color: white;
+  width: 100%;
+  border-radius: 20rpx;
+  padding: 20rpx 20rpx 40rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+.title{
+    /* width: 120rpx; */
+    /* width: 100; */
+    padding-right:30rpx;
+    overflow: hidden;
+    display: -webkit-box;
+    /* flex-grow: 1; */
+    box-sizing: border-box;
+    height: 83rpx;
+    margin-left: 20rpx;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* 图片大小 */
+.checkediconimg{
+  width: 150rpx;
+  height: 150rpx;
+}
+/* 价格 */
+.price{
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  display: flex;
+  padding-right: 30rpx;
+}
+.sprice{
+  flex-grow: 1;
+  color: #DF3D2B;
+}
+/* 加数量 */
+.addprice{
+  display: flex;
+}
+.weui-input{
+  background-color: #F2F2F2;
+  width: 60rpx;
+  height: 50rpx;
+}
+.addnum{
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50rpx;
+  margin: 0 10rpx;
+}

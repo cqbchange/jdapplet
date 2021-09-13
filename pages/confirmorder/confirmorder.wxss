@@ -1,0 +1,237 @@
+/* pages/confirmorder/confirmorder.wxss */
+.address {
+  padding: 30rpx 20rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.addleft {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.addtop {
+  font-size: 32rpx;
+  color: #3a3a3a;
+  font-weight: bold;
+}
+
+.addbon {
+  font-weight: 500;
+  font-size: 28rpx;
+}
+
+.addright {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 我的收货地址 */
+.amend-right {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 120rpx;
+  left: 0;
+  display: none;
+}
+
+.amendrights {
+  display: block;
+}
+
+.addressitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.addleft {
+  display: flex;
+  font-size: 30rpx;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.addletop {
+  width: 80%;
+}
+.paygoods{
+  max-height: 80vh;
+  overflow: scroll;
+}
+.addbott {
+  color: #3b3b3b;
+  font-size: 20rpx;
+  font-weight: 550;
+}
+
+.addright {
+  width: 90rpx;
+  color: #DF3D2B;
+}
+
+/* 结算商品 */
+.goodsitem {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.goodsimg {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+
+.goodsright {
+  width: 80%;
+}
+
+.rtop {
+  color: #161616;
+  font-weight: 550;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 6rpx;
+}
+
+.dec {
+  font-size: 25rpx;
+  color: #6e6e6e;
+}
+
+.goodprice {
+  margin-top: 8rpx;
+  color: #E94D4E;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.num {
+  color: #9c9c9c;
+  font-weight: 500;
+}
+
+.allprice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  font-weight: bold;
+  color: #6e6e6e;
+}
+
+.aggregate {
+  display: flex;
+  padding: 30rpx 20rpx;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.aggrz {
+  color: #6e6e6e;
+}
+
+.aggrp {
+  color: #DF3D2B;
+}
+
+.pay {
+  position: absolute;
+  width: 90%;
+  padding: 25rpx 30rpx;
+  border-top: 1px solid #eee;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.paywrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.wxpay{
+   width: 40%;  
+   background-color: #05B902;
+   height: 70rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #fff;
+   border-radius: 50rpx;
+}
+.addorth{
+  margin: auto;
+  background-color: #DF3D2B;
+  width: 190rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 20rpx;
+  height: 60rpx;
+  border-radius: 80rpx;
+}
+/* 新增收货地址 */
+.amend{
+  padding: 10rpx;
+  display: none;
+}
+.amendrights {
+  display: block;
+}
+
+.addtake {
+  position: absolute;
+  width: 60%;
+  height: 60rpx;
+  border-radius: 60rpx;
+  background-color: #F21A0D;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  bottom: 75rpx;
+  left: 110rpx;
+}
+
+.consignee {
+  margin-left: 10rpx;
+  padding: 26rpx 0;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.consper {
+  width: 140rpx;
+  color: #838383;
+}
+
+.location {
+  position: absolute;
+  right: 15rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.setdeft {
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 15rpx;
+  justify-content: space-between;
+  align-items: center;
+}

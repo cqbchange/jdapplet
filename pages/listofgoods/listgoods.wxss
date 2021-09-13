@@ -1,0 +1,71 @@
+.goodswrap{
+  padding: 60rpx 20rpx 0 20rpx;
+  display: flex;
+  background-color:#F4F4F4 ;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.goodsitem{
+  width: 48%;
+  padding-bottom: 32rpx;
+   border-radius: 20rpx;
+   background-color: #fff;
+   margin-bottom: 20rpx;
+}
+.goodsimg{
+  width: 100%;
+  height: 350rpx;
+  display: block;
+  border-radius: 20rpx  20rpx 0 0;
+}
+.goodsdesc{
+  padding: 0 10rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  color:#838383;
+  font-weight: 500;
+  margin-top: 8rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goodspric{
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+  color: #FF4142;
+  display: flex;
+  padding: 0 20rpx;
+  align-items: center;
+}
+.goodsicon{
+  margin-left:-10rpx;
+  display: block;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.goodspl{
+  display: flex;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.plitem{
+  font-size: 24rpx;
+  color:#C4C4C4;
+}
+.plpoine{
+  display: flex;
+  width: 30rpx;
+  justify-content: space-between;
+}
+.plpo{
+  width: 5rpx;
+  height: 5rpx;
+  border-radius: 100%;
+  background-color: #c4c4c4;
+}

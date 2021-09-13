@@ -1,0 +1,5 @@
+<!--components/topnav/topnav.wxml-->
+<view class="topnavcontaner">
+  <text class="topnavtitle">{{title}}</text>
+  <image src="/static/indeximg/left.svg" class="navimg {{block == 'none'?'navimg':'navblock'}}" bindtap="ret"></image>
+</view>

@@ -1,0 +1,52 @@
+
+/* .main{
+  height: 100vh;
+} */
+.index_container{
+  padding-top: 140rpx;
+  display: flex;
+}
+/* 左边导航 */
+.leftnav{
+  position: fixed;
+  top: 140rpx;
+  bottom: 0;
+  width: 200rpx;
+  overflow: scroll;
+  margin-top: 20rpx;
+  background-color: #F8F8F8;
+}
+.lefttext{
+  padding: 30rpx 10px;
+  border-left: 5rpx solid transparent;
+  justify-content: center;
+  text-align: center;
+}
+/* 点击样式 */
+.leftnavestyle{
+  padding: 30rpx 10px;
+  border-left: 5rpx solid red;
+  background-color: #fff;
+  justify-content: center;
+  text-align: center;
+}
+/* //右边内容 */
+.rightcont{
+  position: fixed;
+  top: 140rpx;
+  bottom: 0;
+  left: 200rpx;
+  right: 0;
+  overflow: scroll;
+  background-color: #FFFFFF;
+  padding: 20rpx 16rpx 0;
+}
+.threes{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+}
+.prcimg{
+  width: 100rpx;
+  height: 100rpx;
+}

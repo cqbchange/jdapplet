@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/goodsdet/goodsdet", 
+    "pages/confirmorder/confirmorder",
+    "pages/shoppingcart/shoppingcart",
+    "pages/index/index",
+    "pages/personcenter/personcenter",
+    "pages/myorder/myorder",
+    "pages/listofgoods/listgoods",
+    "pages/logs/logs",
+    "pages/sort/sort"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "将要获取你的当前地址"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#DF3D2B",
+    "navigationBarTitleText": "京东购物",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#000000",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/PublicImg/inunche.png",
+        "selectedIconPath": "pages/PublicImg/inche.png"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "text": "分类",
+        "iconPath": "pages/PublicImg/classifyunche.png",
+        "selectedIconPath": "pages/PublicImg/classifyche.png"
+      },
+      {
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "text": "购物车",
+        "iconPath": "pages/PublicImg/shopcarunche.png",
+        "selectedIconPath": "pages/PublicImg/shopcarche.png"
+      },
+      {
+        "pagePath": "pages/personcenter/personcenter",
+        "text": "个人中心",
+        "iconPath": "pages/PublicImg/personalunche.png",
+        "selectedIconPath": "pages/PublicImg/peronalche.png"
+      }
+    ]
+  }
+}

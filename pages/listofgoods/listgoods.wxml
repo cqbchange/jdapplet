@@ -1,0 +1,21 @@
+<topnav title="{{title}}"  block="{{block}}" pagename="{{pagename}}"></topnav>
+<view class="goodswrap"> 
+  <view class="goodsitem" wx:for="{{goodslistdata}}" wx:key="{{item.good_id}}" bindtap="lookgoods" data-id="{{item.good_id}}">
+    <image src="{{item.img}}" class="goodsimg"></image>
+    <view class="goodsdesc">
+      {{item.good_name}}
+    </view>
+    <view class="goodspric">
+      <text class="goodsicon">￥</text>
+      {{item.price}}
+    </view>
+    <view class="goodspl">
+      <view class="plitem">200条评论</view>
+      <view class="plpoine">
+        <view class="plpo"></view>
+        <view class="plpo"></view>
+        <view class="plpo"></view>
+      </view>
+    </view>
+  </view>
+</view>

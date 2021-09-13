@@ -1,0 +1,89 @@
+<!-- 购物车页 -->
+<view class="entirety">
+<topnav title='{{title}}'></topnav>
+<view class="main">
+<view class="scont">
+<view class="address" bindtap="address">{{addres}}</view>
+<view bindtap="compile">
+ <view wx:if="{{compiles}}">| 编辑</view>
+ <view wx:else> 完成</view>
+</view>
+<view class="shareimg"><image  wx:if="{{compiles}}" src="/static/indeximg/Share.svg" class="iconimg"></image></view>
+</view>
+</view>
+<!-- //选择地址 -->
+<view class='{{action==isshow? "adressbottom":"addaress"}}'>
+<view class="distribution">
+<view class="asdf">
+<view>
+  <view wx:if="{{cityData}}" bindtap="goback">返回</view>
+  <view wx:if="{{addressData}}" bindtap="goback" class="gong"></view>
+</view>
+ <view class="sdistrib">配送至</view> 
+<view bindtap="detele"><image src="/static/indeximg/Buttonicon.svg" class="iconimg"></image></view>
+</view>
+<view class="city" wx:if="{{addressData}}" wx:for="{{shaddlist}}" wx:key="item.address_id" bindtap="chuseadd" data-id="{{item.address_id}}" data-name="{{item}}">
+{{item.area}}
+</view>
+<view class="city publiccity"  wx:if="{{cityData}}">
+<view class="citystyle"> <view class="plublic">中国大陆 </view> </view>
+<view class="citystyle">  
+   <view class='{{pindex==true ? "plublic":"plublicp"}}' wx:if="{{pcData}}" bindtap="clickp">{{selectp}}</view> 
+   <view class='{{cindex==true ? "plublic":"plublicp"}}' wx:if="{{ccData}}" bindtap="clickc">{{selectp1}}</view>
+   <view  class='{{xindex==true ? "plublic":"plublicp"}}' wx:if="{{xcData}}" bindtap="clickx">{{selectp2}}</view> 
+</view> 
+<!-- 城市县区 -->
+<view class="province">
+<view wx:if="{{pData}}"> 
+<view wx:for="{{province}}" wx:key="item.id" class='{{procinceindex==index ? "sazecolor":"stylecptive"}}' bindtap="clickprocince" data-index="{{index}}" data-bean='{{item}}' >{{item.name}}</view>
+</view>
+<view wx:if="{{cData}}">
+<view wx:for="{{province1}}" wx:key="item.id" class='{{cprocinceindex1==index ? "sazecolor":"stylecptive"}}' bindtap="clickprocince1" data-index="{{index}}" data-bean='{{item}}' >{{item.fullname}}</view>
+</view>
+<view wx:if="{{xData}}">
+<view wx:for="{{province2}}" wx:key="item.id" class='{{xprocinceindex2==index?"sazecolor":"stylecptive"}}' bindtap="clickprocince2" data-index="{{index}}" data-bean='{{item}}' >{{item.fullname}}</view>
+</view>
+</view>
+</view>
+<view class="elseaddress" bindtap="elseaddress" wx:if="{{addressData}}">选择其他地址</view>
+</view>
+</view>
+<!-- 购物 -->
+<view class="shoppcar">
+<checkbox-group >
+   <view wx:for="{{items}}"  class="shoppings" Wx:key='item.shopping_car_id'>
+      <label class="checkbox" bindtap="select" data-index="{{index}}">
+         <checkbox value="{{key}}" checked="{{item.checked}}" class="checkbox"></checkbox>
+      </label>
+      <view class="checkediconimg">
+      <image src="{{item.img}}" class="checkediconimg"></image>
+      </view>
+      <view>
+      <view class="title">{{item.good_name}}</view>
+      <view class="sku">{{item.sku}}</view>
+      <view class="price">
+      <view class="sprice">￥{{item.price}}</view>
+      <view class="addprice">
+           <view class="addnum" bindtap="addnum" data-index="{{index}}">+</view>
+           <view> <input class="weui-input" type="number" placeholder="1" data-index="{{index}}" bindinput="bindKeyInput" model:value="{{item.num}}"/></view>
+           <view class="addnum" bindtap="subnum" data-index="{{index}}">-</view> 
+      </view>
+      </view>
+      </view>
+   </view> 
+
+</checkbox-group>
+
+</view>
+<!-- 底部结算 -->
+<view class='{{action==isshow? "":"bottombase"}}'>
+<view class="checkall">
+  <label bindtap="selectall">
+  <checkbox class="checkbox" checked="{{checkboxall}}" /> 全选
+  </label>
+  </view>
+<view class="aggregate"  wx:if="{{compiles}}">总计：{{price}}</view>
+<view class="serrlement"  wx:if="{{compiles}}" bindtap="gopay">去结算({{nums}})</view>
+<view class="serrlement" bindtap="deteleshopping"  wx:else>删除</view>
+</view>
+</view>

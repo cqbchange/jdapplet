@@ -1,0 +1,174 @@
+<!--个人中心页-->
+<topnav title="{{title}}"></topnav>
+<view class="usertx">
+  <view class="txfont">
+    <image src="{{icons}}" class="userimg"></image>
+    <view id="username">{{nackname}}</view>
+  </view>
+  <image src="/static/person/set.svg" class="userset" bindtap="setuserinfo"></image>
+</view>
+<view class="order-wrap">
+  <view class="oderitem" bindtap="showorder">
+    <image src="/static/person/dfk.svg" class="odericons"></image>
+    <view class="orderfont">待付款</view>
+  </view>
+  <view class="oderitem" bindtap="showorder">
+    <image src="/static/person/dsh.svg" class="odericon"></image>
+    <view>待收货</view>
+  </view>
+  <view class="oderitem" bindtap="showorder">
+    <image src="/static/person/dpj.svg" class="odericon"></image>
+    <view>待评价</view>
+  </view>
+  <view class="oderitem" bindtap="showorder">
+    <image src="/static/person/alldd.svg" class="odericon"></image>
+    <view>全部订单</view>
+  </view>
+</view>
+<view class="recomm">为你推荐</view>
+<!-- 商品列表 -->
+<view class="goodswrap">
+  <view class="goodsitem" wx:for="{{goodslistdata}}" wx:key="{{item.good_id}}" bindtap="lookgoods"  data-id="{{item.good_id}}">
+    <image src="{{item.img}}" class="goodsimg"></image>
+    <view class="goodsdesc">
+      {{item.good_name}}
+    </view>
+    <view class="goodspric">
+      <text class="goodsicon">￥</text>
+      {{item.price}}
+    </view>
+    <view class="goodspl">
+      <view class="plitem">200条评论</view>
+      <view class="plpoine">
+        <view class="plpo"></view>
+        <view class="plpo"></view>
+        <view class="plpo"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 点击设置修改信息 -->
+<view class="amend-contaner {{amends == true?'amends':''}}">
+  <view class="amclosewrap">
+    <image src="/static/loginimg/close.svg" class="amclose" bindtap="closeset"></image>
+  </view>
+
+  <view class="amend-wrap">
+    <view class="amenditem {{defimdex == index?'amenditems':''}}" wx:for="{{amitem}}" xw:key="{{index}}"
+      data-index="{{index}}" bindtap="rset">{{item}}</view>
+  </view>
+  <!-- 新增收获地址 -->
+  <view class="amend-right {{defimdex == 1?'amendrights':''}}">
+    <view class="addtake" bindtap="addshipping">添加地址</view>
+    <view class="consignee">
+      <view class="consper"> 收货人</view>
+      <input class="weui-input" auto-focus model:value="{{consignee}}" />
+    </view>
+    <view class="consignee">
+      <view class="consper"> 联系方式</view>
+      <input class="weui-input" auto-focus model:value="{{contact}}" />
+    </view>
+    <view class="consignee">
+      <view class="consper"> 所在地区</view>
+      <input class="weui-input" auto-focus model:value="{{area}}" disabled="disabled" bindtap="getautoadd"/>
+      <image src="/static/person/location.svg" class="location" bindtap="getautoadd"></image>
+    </view>
+    <view class="consignee">
+      <view class="consper"> 详细地址</view>
+      <input class="weui-input" auto-focus model:value="{{detaddress}}" />
+    </view>
+  </view>
+  <!-- 我的收货地址 -->
+  <view class="amend-right {{defimdex == 0?'amendrights':''}}">
+    <view class="addressitem" wx:for="{{shadd}}" wx:key="{{index}}" data-index="{{index}}">
+      <view wx:if="{{item.default == 1}}" id="defaultadd">默认</view>
+      <view class="addleft">
+        <view class="addletop">{{item.name}} {{item.phone}}</view>
+        <view class="addbott">{{item.detailed}}</view>
+      </view>
+      <view class="addright" bindtap="repet" data-index="{{index}}">编辑 </view>
+    </view>
+  </view>
+  <!-- 编辑地址 -->
+  <view class="amend-right {{defimdex == 2?'amendrights':''}}">
+    <view class="addtake" bindtap="reperadd">确认修改</view>
+    <view class="consignee">
+      <view class="consper"> 收货人</view>
+      <input class="weui-input" auto-focus model:value="{{repetadd.name}}" />
+    </view>
+    <view class="consignee">
+      <view class="consper"> 联系方式</view>
+      <input class="weui-input" auto-focus model:value="{{repetadd.phone}}" />
+    </view>
+    <view class="consignee">
+      <view class="consper"> 所在地区</view>
+      <input class="weui-input" auto-focus model:value="{{repetadd.add}}" disabled="disabled" bindtap="getautoadd"/>
+      <image src="/static/person/location.svg" class="location" bindtap="getautoadd"></image>
+    </view>
+    <view class="consignee">
+      <view class="consper"> 详细地址</view>
+      <input class="weui-input" auto-focus model:value="{{detaddresss}}" />
+    </view>
+    <view class="setdeft">
+      <view class="setdfont"> 设置为默认地址</view>
+      <view class="section section_gap">
+        <view class="body-view">
+          <switch checked="{{switch1Checked}}" bindchange="switch1Change" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 修改个人信息 -->
+  <view class="amend-right {{defimdex == 3?'amendrights':''}}">
+    <view class="usinfo">
+      <view class="userinfo">
+        <view class="username">头像</view>
+        <image class="tox" src="{{icons}}" bindtap="chooseimg"></image>
+      </view>
+      <view class="userinfo">
+        <view class="username">昵称</view>
+        <input class="weui-input" auto-focus model:value="{{nackname}}" />
+      </view>
+      <view class="userinfo">
+        <view class="username">邮箱</view>
+        <input class="weui-input" auto-focus model:value="{{email}}" />
+      </view>
+      <view class="userinfo">
+        <view class="username">qq</view>
+        <input class="weui-input" auto-focus model:value="{{qq}}" />
+      </view>
+      <view class="userinfo">
+        <view class="username">手机号</view>
+        <input class="weui-input" auto-focus model:value="{{phon}}" />
+      </view>
+      <view class="userinfo">
+        <view class="username">性别</view>
+        <view class=" weui-cells_after-title" id="weui-cells">
+          <radio-group bindchange="radioChange">
+            <label class=" weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}" id="weui-cell">
+              <view class="weui-cell__hd">
+                <radio value="{{item.value}}" checked="true" />
+              </view>
+              <view class="weui-cell__bd">{{item.name}}</view>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+    </view>
+    <view class="conform" bindtap="confirm">确认修改</view>
+  </view>
+  <!-- 修改密码 -->
+  <view class="amend-right {{defimdex == 4?'amendrights':''}}">
+    <view class="usinfo">
+      <view class="userinfo">
+        <view class="username">新密码</view>
+        <input class="weui-input" auto-focus model:value="{{newpassword}}" />
+      </view>
+      <view class="userinfo">
+        <view class="username">旧密码</view>
+        <input class="weui-input" auto-focus model:value="{{oldpassword}}" />
+      </view>
+      <view class="conform" bindtap="confirm">确认修改</view>
+    </view>
+  </view>
+</view>

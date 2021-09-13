@@ -1,0 +1,55 @@
+<!--登录页-->
+<topnav title="{{login}}" block="{{block}}" pagename="{{pagename}}"></topnav>
+<view class="login-wrap">
+  <view class="help">帮助</view>
+  <view class="logo">
+    <image class="logoimg" src="/static/loginimg/jdlogo.svg"></image>
+    <text>登录了解更多优惠好物</text>
+  </view>
+  <view class="btn" bindtap="login">微信一键登录</view>
+  <view class="uesrlode">
+    <image src="{{check == false?'/static/loginimg/serunche.svg':'/static/loginimg/serche.svg'}}" class="serimg"
+      bindtap="check"></image>
+    <text class="gray">若手机号未注册将进入注册流程，注册即为同意<text class="red">《京东用户注册协议》《京东隐私政策》</text></text>
+  </view>
+  <view class="orer">其他登录方式</view>
+  <view class="pho">
+    <view class="phon">
+      <image src="/static/loginimg/phon.svg" class="phonimg"></image>
+      <text>手机验证</text>
+    </view>
+    <view class="suo">
+      <image class="suoimg" src="/static/loginimg/lock.svg"></image>
+      <text>账户登录</text>
+    </view>
+  </view>
+  <!-- 授权信息 -->
+  <view class="anthor-contaner {{anthor == true?'ah':''}}">
+    <view class="author-wrap">
+      <view class="author-top">
+        <view class="authlogo">
+          <image src="/static/loginimg/author.svg" class="authorimg"> </image><text>京东购物 申请</text>
+        </view>
+        <image class="auth-close" src="/static/loginimg/close.svg" bindtap="closeauthor"></image>
+      </view>
+      <view class="getusermsg">
+        获取你的昵称、头像、地区及性别
+      </view>
+      <view class="usermsg">
+        <view class="font">
+          <image src="" class="userimg"></image>
+          <view class="username">
+            <view class="usernames">{{}}Lyann</view>
+            <view class="weix">微信个人信息</view>
+          </view>
+        </view>
+        <image class="checkuser" src="/static/loginimg/gou.svg"></image>
+      </view>
+      <view class="btns">
+      <view class="rfus" bindtap="closeauthor">拒绝</view>
+      <view class="allow">允许</view>
+      </view>
+    </view>
+  </view>
+
+</view>

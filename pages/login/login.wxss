@@ -1,0 +1,206 @@
+/* pages/Login/login.wxss */
+.login-wrap{
+  padding: 30rpx 20rpx;
+  position: relative;
+}
+.help{
+  display: flex;
+  width: 100%;
+  font-size: 30rpx;
+  color: #505050;
+ justify-content: flex-end;
+}
+.logo{
+  display: flex;
+  margin-top: 50rpx;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo text{
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #353535;
+}
+.logoimg{
+  width: 150rpx;
+  height: 150rpx;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #14B431;
+  color: #fff;
+  height: 80rpx;
+  margin-top: 78rpx;
+  border-radius: 80rpx;
+  margin-bottom:30rpx ;
+}
+.uesrlode{
+  padding: 0 20rpx;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.serimg{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: -10rpx;
+}
+.gray{
+  font-size: 25rpx;
+  color:#999999 ;
+}
+.red{
+  color: #FF4243;
+}
+.orer{
+  margin-top: 40vh;
+  text-align: center;
+  color: #919191;
+  font-size: 25rpx;
+}
+.pho{
+  display: flex;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  color: #919191;
+  font-size: 25rpx;
+}
+.phon,.suo{
+  display: flex;
+  width: 100rpx;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.phonimg{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 5rpx;
+}
+.suoimg{
+  width: 70rpx;
+  height: 70rpx;
+  margin-bottom: 5rpx;
+}
+/* 搜权信息 */
+.anthor-contaner{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.2);
+  bottom: -120vh;
+  z-index: 100;
+  left: 0;
+  transition: all linear 0.2s;
+}
+.ah{
+  bottom:-88rpx;
+}
+.author-wrap{
+  height: 28vh;
+  padding: 30rpx;
+  width: 92%;
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 30rpx 30rpx 0 0 ;
+}
+.author-top{
+  display: flex;
+
+  justify-content: space-between;
+}
+.authorimg{
+  width: 55rpx;
+  height: 55rpx;
+  margin-right: 15rpx;
+  color: #000;
+}
+.authlogo{
+  display: flex;
+  align-items: center;
+}
+.auth-close{
+  width: 45rpx;
+  height: 45rpx;
+}
+.getusermsg{
+  color:#1F1F1F ;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  border-bottom: 1px solid rgb(248, 248, 248);
+  padding-bottom: 30rpx;
+}
+.usermsg{
+  display: flex;
+  padding: 20rpx 0;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(248, 248, 248);
+}
+.username{
+  margin-left: 10rpx;
+}
+.font{
+  display: flex;
+}
+.usernams{
+  font-size: 42rpx;
+  color: #1D1D1D;
+  font-weight: bold;
+}
+.weix{
+  font-size: 25rpx;
+  color: #919191;
+  margin-top: 10rpx;
+}
+.userimg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+.checkuser{
+  width: 50rpx;
+  height: 50rpx;
+}
+.btns{
+  display: flex;
+  width: 70%;
+  margin: 40rpx auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.rfus{
+  background-color: #F2F2F2;
+  width: 47%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #07C160;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-radius: 10rpx;
+}
+.allow{
+  background-color: #07C160;
+  width: 47%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-radius: 10rpx;
+}

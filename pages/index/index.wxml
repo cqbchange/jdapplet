@@ -1,0 +1,61 @@
+<!--首页-->
+<topnav title="{{title}}"></topnav>
+<view class="index_container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <image src="/static/indeximg/search.svg" class="searchimg"></image>
+      <input class="weui-input"  placeholder="吹风机" />
+      <image src="/static/indeximg/xiangji.svg" class="searchxiangji"></image>
+    </view>
+  </view>
+  <image src="{{showmor == true?'/static/indeximg/up.svg':'/static/indeximg/down.svg'}} " class="unfold" bindtap="unfold"></image>
+  <!-- 商品分类 -->
+  <view class="titles">
+  <view class="showmorwrap {{showmor == true?'showmor':''}}">
+    <view class="moritem" wx:for="{{classfil}}" wx:key="index">{{item.type_name}}</view>
+  </view>
+    <view class="classtitle {{deindex == -1?'boderbo':''}}"  bindtap="checkgoo">首页</view>
+    <view wx:for="{{classfil}}" wx:key="index" class="classtitle {{deindex == index?'boderbo':''}}"
+      bindtap="checkgoodsclass" data-index="{{index}}" data-name="{{item}}">{{item.type_name}}</view>
+  </view>
+</view>
+ <!-- 轮播图 -->
+ <view class="swiper-wrap">
+ <view class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this" class="block">
+        <swiper-item class="swiper-item">
+          <image src="{{item.pic}}" class="swiperimg"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+<!-- 分类图标 -->
+<view class="icon-wrap">
+  <view class="iconitem" wx:for="{{icon}}" wx:key="{{item. icon}}">
+    <image src="{{item.icon}}" class="iconimg"></image>
+    <view>{{item.title}}</view>
+  </view>
+</view>
+<!-- 商品列表 -->
+<view class="goodswrap">
+  <view class="goodsitem" wx:for="{{goodslistdata}}" wx:key="{{item.good_id}}" bindtap="lookgoods" data-id="{{item.good_id}}">
+    <image src="{{item.img}}" class="goodsimg"></image>
+    <view class="goodsdesc">
+      {{item.good_name}}
+    </view>
+    <view class="goodspric">
+      <text class="goodsicon">￥</text>
+      {{item.price}}
+    </view>
+    <view class="goodspl">
+      <view class="plitem">200条评论</view>
+      <view class="plpoine">
+        <view class="plpo"></view>
+        <view class="plpo"></view>
+        <view class="plpo"></view>
+      </view>
+    </view>
+  </view>
+</view>

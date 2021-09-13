@@ -1,0 +1,27 @@
+<!--我的订单-->
+<topnav title="{{title}}" block="{{block}}" pagename="{{pagename}}"></topnav>
+<view class="contaner">
+  <!-- 全部订单 -->
+  <view class="allorder">
+    <view class="orderitem {{defltindex == index?'orderitems':''}}" wx:for="{{orderitem}}" wx:key="{{index}}"
+      data-index="{{index}}" bindtap="clickitem">
+      {{item}}
+    </view>
+  </view>
+  <!-- 每个商品 -->
+  <view class="goodswrap" wx:for="{{randerdata}}" wx:key="item.order_id">
+  <view class="orderstate">{{item.status}}</view>
+    <view class="goodsitem" wx:for="{{item.childern}}" wx:key="{{index}}"  wx:for-item="i">
+      <view class="top">
+        <image src="{{i.img}}" class="img"></image>
+        <view class="dec">{{i.good_name.name}}</view>
+        <view class="num">X{{i.num}}</view>
+      </view>
+      <view class="price">总价￥{{i.money}} 
+        <view class="baybtn" wx:if="{{item.status == '未支付'}}">去付款</view> 
+      <view class="baybtn" wx:elif="{{item.status == '已发货'}}">确认收货</view> 
+      <view class="baybtn" wx:else>再次购买</view>
+      </view>
+    </view>
+  </view>
+</view>

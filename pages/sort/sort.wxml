@@ -1,0 +1,29 @@
+<!-- 分页 -->
+<view class="main"> 
+<topnav title='{{title}}'></topnav>
+<view class="index_container">
+  <!-- 左边导航 -->
+<view class="leftnav">
+  <view wx:for="{{classfil}}" class='{{isSelect==index? "leftnavestyle": "lefttext"}}' data-index="{{index}}" wx:key="item.good_type_id" bindtap='navclick'>
+     {{item.type_name}}
+  </view>
+</view> 
+<!-- 右边内容 -->
+<view class="rightcont">
+ <view wx:for="{{second}}">
+  {{item.type_name}}  
+  <!-- //三级 -->
+  <view class="threes">
+    <view wx:for="{{three}}" class="threes"  data-index="{{index}}" data-item='{{item}}' bindtap="threeitem">
+      <view>
+      <image src="/static/indeximg/listpage.svg" class="prcimg"></image>
+      <view>
+      {{item.type_name}} 
+      </view>
+      </view>
+    </view>
+  </view>
+ </view>
+</view>
+</view>
+</view>

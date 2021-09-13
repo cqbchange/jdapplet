@@ -1,0 +1,69 @@
+<!--确认订单页-->
+<topnav title="{{title}}" block="{{block}}" pagename="{{pagename}}"></topnav>
+<!-- 地址 -->
+<view class="address">
+  <view class="addleft">
+    <view class="addtop">{{chuseadd.name}} {{chuseadd.phone}}</view>
+    <view class="addbon">{{chuseadd.area}}</view>
+  </view>
+  <image class="addright" src="/static/shopcarimg/right.svg" bindtap="checkadd">
+  </image>
+  <!-- 我的收货地址 -->
+  <view class="amend-right {{defimdex == true?'amendrights':''}}">
+    <view class="addressitem" wx:for="{{shadd}}" wx:key="{{index}}" data-index="{{index}}">
+      <view class="addleft">
+        <view class="addletop">{{item.name}} {{item.phone}}</view>
+        <view class="addbott">{{item.area}}</view>
+      </view>
+      <view class="addright" bindtap="repet" data-index="{{index}}">选择 </view>
+    </view>
+    <view class="amend {{defi == true?'amendrights':''}}">
+      <view class="consignee">
+        <view class="consper"> 收货人</view>
+        <input class="weui-input" auto-focus model:value="{{consignee}}" />
+      </view>
+      <view class="consignee">
+        <view class="consper"> 联系方式</view>
+        <input class="weui-input" auto-focus model:value="{{contact}}" />
+      </view>
+      <view class="consignee">
+        <view class="consper"> 所在地区</view>
+        <input class="weui-input" auto-focus model:value="{{area}}" disabled="disabled" bindtap="getautoadd" />
+        <image src="/static/person/location.svg" class="location" bindtap="getautoadd"></image>
+      </view>
+      <view class="consignee">
+        <view class="consper"> 详细地址</view>
+        <input class="weui-input" auto-focus model:value="{{detaddress}}" />
+      </view>
+    </view>
+    <view class="addorth" bindtap="address">添加地址</view>
+  </view>
+</view>
+<!-- 结算商品 -->
+<view class="paygoods">
+  <view class="goodsitem" wx:for="{{settlegoods}}" wx:key="index" data-index="{{index}}">
+    <image src="{{item.img}}" class="goodsimg"></image>
+    <view class="goodsright">
+      <view class="rtop">{{item.good_name}}</view>
+      <view class="dec">{{item.sku}}</view>
+      <view class="goodprice">
+        <text>￥{{item.price}}</text>
+        <text class="num">X{{item.num}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="allprice">
+    <text>商品总额</text>
+    <text>￥{{allprice}}</text>
+  </view>
+  <view class="aggregate">
+    <text class="aggrz">总计：<text class="aggrp">￥{{allprice}}</text> </text>
+  </view>
+</view>
+<view class="pay">
+  <view class="paywrap">
+    <text class="aggrz">总计：<text class="aggrp">￥{{allprice}}</text> </text>
+    <view class="wxpay" bindtap="paymony">微信支付</view>
+  </view>
+</view>

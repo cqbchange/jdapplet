@@ -1,0 +1,146 @@
+<!--商品详情页-->
+<import src="../../wxParse/wxParse.wxml"/>
+<topnav title="{{title}}" block="{{block}}" pagename="{{pagename}}"></topnav>
+<!-- 轮播图 -->
+<view class="contaner">
+  <view class="topimgs">
+    <view class="page-section page-section-spacing swiper">
+      <swiper>
+        <block wx:for="{{goodslist.info[0].imgs}}" wx:key="*this" class="block">
+          <swiper-item class="swiper-item">
+            <image src="{{item}}" class="swiperimg"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="imgpage">
+      1/{{goodslist.info[0].imgs.length}}
+    </view>
+  </view>
+  <!-- 商品价格 -->
+  <view class="goodsprice">
+    <view class="gprice">
+      <text class="icon">
+        ￥</text>
+      {{goodslist.price}}
+    </view>
+    <view class="pricon">
+      <view class="donprice">
+        <image src="/static/goodsdetimg/mony.svg" class="prcimg"></image>
+        <text>降价通知</text>
+      </view>
+      <view class="scpric">
+        <image src="/static/goodsdetimg/souc.svg" class="prcimgs"></image>
+        <text>收藏</text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品描述 -->
+  <view class="goodsname">
+    {{goodslist.good_name}}
+  </view>
+  <view class="bag"></view>
+  <!-- 已选 -->
+  <view class="check-wrap">
+    <view class="orche">
+      <view class="or-font">
+        <view class="or-left">已选</view>
+        <view class="or-mid">{{checkgoods}}</view>
+      </view>
+      <view class="or-right" bindtap="chusgoodsgge">
+        <view class="point" wx:for="{{point}}" wx:key="item"></view>
+      </view>
+    </view>
+    <!-- 配送 -->
+    <view class="orche">
+      <view class="or-font">
+        <view class="or-left">送至</view>
+        <view class="or-mid">{{checkaddress}}</view>
+      </view>
+      <view class="or-right" bindtap="chooseadd">
+        <view class="point" wx:for="{{point}}" wx:key="item"></view>
+      </view>
+    </view>
+    <!-- 数量 -->
+    <view class="orche">
+      <view class="or-font">
+        <view class="or-left">数量</view>
+        <view class="num-mid"> <view class="jia" bindtap="numjian">-</view>{{allnum}} <view class="jian" bindtap="numjia">+</view> 总价￥{{allprice}} </view>
+      </view>
+      <view class="or-right" >
+        <view class="point" wx:for="{{point}}" wx:key="item"></view>
+      </view>
+    </view>
+ 
+  </view>
+  <view class="bag"></view>
+  <view class="bag"></view>
+  <!-- 评价 -->
+  <view class="comment-wrap">
+    <view class="comment-title">
+      <view class="comment-left">评价</view>
+      <view class="comment-right">好评度100%></view>
+    </view>
+  </view>
+  <view class="gooddet">商品详情</view>
+  <template is="wxParse" data="{{wxParseData:info.nodes}}" />
+  <!-- 底部店铺信息 -->
+  <view class="shopmsg">
+    <view class="shop">
+      <image src="/static/goodsdetimg/shop.svg" class="shopimg"></image>
+      <text>店铺</text>
+    </view>
+    <view class="shop">
+      <image src="/static/goodsdetimg/serve.svg" class="serveimg"></image>
+      <text>客服</text>
+    </view>
+    <view class="shop">
+      <image src="/static/goodsdetimg/shopcar.svg" class="carimg"></image>
+      <text>购物车</text>
+    </view>
+    <view class="addshopcar" bindtap="addshopcar">加入购物车</view>
+    <view class="atbuy" bindtap="atonsebuy">立即购买</view>
+  </view>
+  <!-- sku -->
+  <view class="sku-contaner {{skudh == true?'skudh':''}}">
+    <view class="sku-wrap">
+      <view class="sku-top">
+        <image src="{{goodslist.info[0].imgs[0]}}" class="skuimg"></image>
+        <view class="sku-top-right">
+          <image src="/static/goodsdetimg/open.svg" class="open" bindtap="close"></image>
+          <view class="skuprice">
+            <view class="skufont">￥ <text class="skufonts">{{nowpageprice}} </text> </view>
+            <view class="skuche">已选 <text class="skueches">{{checkgoods}}</text> </view>
+          </view>
+        </view>
+      </view>
+      <!-- sku -->
+      <view class="skubody">
+      <view class="parameters" wx:for="{{sku.specList}}" wx:key="{{item.title}}" data-index="{{in}}" wx:for-index="in">
+        <view class="partitle" wx:if="{{item.title}}">{{item.title}}</view>
+        <view class="partitle" wx:else>{{item.titel}}</view>
+        <view class="combo">
+          <view class="{{skunull[in] == item?'comboitems':'comboitem'}}" wx:for="{{item.list}}" wx:key="{{item}}"
+            bindtap="ordergood" data-name="{{item}}" data-index="{{index}}" data-id="{{in}}">
+            {{item}}
+          </view>
+        </view>
+      </view>
+      <!-- <view class="parameters">
+        <view class="partitle">套餐</view>
+        <view class="combo">
+          <view class="{{chegoodscombo == index?'comboitems':'comboitem'}}" wx:for="{{sku.skuList}}" wx:key="{{item}}"
+            bindtap="ordercombo" data-name="{{item.specs}}" data-index="{{index}}">
+            {{item.specs}}
+          </view>
+        </view>
+      </view> -->
+    </view>
+      <view class="btn">
+        <view class="addcar" bindtap="addshopcar">加入购物车</view>
+        <view class="adonsbuy">立即购买</view>
+      </view>
+    </view>
+  </view>
+ 
+</view>

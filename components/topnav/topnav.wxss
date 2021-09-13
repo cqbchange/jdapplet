@@ -1,0 +1,28 @@
+/* components/topnav/topnav.wxss */
+.topnavcontaner{
+  height: 80rpx;
+  width: 100%;
+  padding-top: 75rpx;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  justify-content: center;
+  background-color: #DF3D2B;
+}
+.topnavtitle{
+  color: #fff;
+  /* color: black; */
+  font-size: 36rpx;
+}
+.navimg{
+  position: absolute;
+  top: 75rpx;
+  left: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  display: none;
+}
+.navblock{
+  display: block;
+}

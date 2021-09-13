@@ -1,0 +1,234 @@
+/**index.wxss**/
+.index_container{
+  padding: 20rpx;
+  height:182rpx;
+  position: sticky;
+  top: 147rpx;
+  z-index: 100;
+  background-color:#DF3D2B;
+}
+/* 搜索框 */
+.weui-cells {
+  position: relative;
+  background-color: #FFFFFF;
+  line-height: 1.41176471;
+  font-size: 17px;
+  border-radius: 100rpx;
+  width: 85%;
+  margin-left: 18rpx;
+}
+.weui-cells_after-title {
+  margin-top: 0;
+}
+.weui-cell {
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+   align-items: center;
+}
+.weui-cell_input {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.weui-input {
+  text-indent: 20rpx;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
+}
+.searchimg{
+  width: 40rpx;
+  height: 40rpx;
+}
+.searchxiangji{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  right: 20rpx;
+}
+/* 商品分类 */
+.index_container .titles{
+  width: 88%;
+  height: 60rpx;
+  line-height: 53rpx;
+  margin-top: 20rpx;
+  display: flex;
+  white-space: nowrap;
+  overflow: scroll;
+  font-size:36rpx ;
+  color: #fff;
+  justify-content: space-between;
+  padding-right: 30rpx;
+  box-shadow: 2rpx 0 2rpx -2rpx rgb(94, 94, 94);
+}
+.classtitle{
+ padding: 0rpx 0rpx 30rpx 0;
+ margin-right: 20rpx;
+ display: flex;
+ align-items: center;
+}
+/* 更多 */
+.showmorwrap{
+  background-color: #fff;
+  padding: 25rpx;
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  top:190rpx;
+  width: 98%;
+  border-radius: 20rpx;
+  color: #838383;
+  max-height: 250rpx;
+  overflow: scroll;
+  border: 1px solid rgb(182, 182, 182);
+}
+.showmor{
+  display: flex;
+}
+.moritem{
+  border-radius: 50rpx;
+  margin-right: 20rpx;
+  border: 1px solid #eee;
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
+}
+.unfold{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 120rpx;
+}
+.boderbo{
+  border: 2px solid;
+  border-image: -webkit-linear-gradient(left,#fff,rgba(255,255,255,0.2))0 0 2 0;
+}
+/* 轮播 */
+.swiper-wrap{
+  width: 100%;
+  height: 50rpx;
+  padding-bottom: 20rpx;
+  background-color:#DF3D2B;
+}
+.swiper-item{
+  display: block;
+  height: 150px;
+}
+.page-section{
+  width: 90%;
+  margin: 0rpx auto;
+  border-radius: 30rpx;
+}
+.page-section swiper{
+  width: 100%;
+  height: 300rpx;
+}
+.block{
+  border-radius: 30rpx;
+  height: 400rpx;
+}
+.page-section-spacing{
+  box-sizing: border-box;
+}
+.swiperimg{
+  width:100%;
+  height: 300rpx;
+  border-radius: 30rpx;
+}
+/* 分类图标 */
+.icon-wrap{
+  background-color:#F4F4F4 ;
+  padding:260rpx  20rpx 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.iconitem{
+  display: flex;
+  flex-wrap: wrap;
+  width: 120rpx;
+   margin-bottom: 20rpx;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #838383;
+}
+.iconimg{
+  width: 90rpx;
+  height: 90rpx;
+}
+/* 商品列表 */
+.goodswrap{
+  padding: 60rpx 20rpx 0 20rpx;
+  display: flex;
+  background-color:#F4F4F4 ;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.goodsitem{
+  width: 48%;
+  padding-bottom: 32rpx;
+   border-radius: 20rpx;
+   background-color: #fff;
+   margin-bottom: 30rpx;
+}
+.goodsimg{
+  width: 100%;
+  height: 350rpx;
+  display: block;
+  border-radius: 20rpx  20rpx 0 0;
+}
+.goodsdesc{
+  padding: 0 10rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  color:#838383;
+  font-weight: 500;
+  margin-top: 8rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goodspric{
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+  color: #FF4142;
+  display: flex;
+  padding: 0 20rpx;
+  align-items: center;
+}
+.goodsicon{
+  margin-left:-10rpx;
+  display: block;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.goodspl{
+  display: flex;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.plitem{
+  font-size: 24rpx;
+  color:#C4C4C4;
+}
+.plpoine{
+  display: flex;
+  width: 30rpx;
+  justify-content: space-between;
+}
+.plpo{
+  width: 5rpx;
+  height: 5rpx;
+  border-radius: 100%;
+  background-color: #c4c4c4;
+}
